@@ -1,0 +1,161 @@
+
+//NOME DO APP E AUTOR:
+     AppDosApps
+     Anderson Venancio da Silveira
+     RM:82529
+
+
+
+
+
+
+
+//androidmanifest.xml
+
+<uses-permission android:name="android.permission.INTERNET"/>
+
+<appplication
+      
+      <activity android:name="MercadoLivreActivity"android:parentActivityName="MainActivity"></activity>
+
+      <activity android:name="EbayActivity"android:parentActivityName="MainActivity"></activity>
+
+      <activity android:name="MagaluActivity"android:parentActivityName="MainActivity"></activity>
+
+      <activity android:name="WebMotorsActivity"android:parentActivityName="MainActivity"></activity>
+
+
+      <activity android:name="SobreActivity"android:parentActivityName="MainActivity"></activity>
+
+
+
+//MainActivity.java
+
+     public void onMercado(View view){
+         Intent intentum = new Intent(this,MercadoLivreActivity.class);
+         startActivity(intentum);
+     }
+    
+
+    public void onEbay(View view){
+        Intent intentdois = new Intent(this,EbayActivity.class);
+        startActivity(intentdois);
+    }
+
+
+    public void onMagalu(View view){
+        Intent intenttres = new Intent(this,MagaluActivity.class);
+        startActivity(intenttres);
+    }
+
+
+    public void onWebMotors(View view){
+        Intent intentquatro = new Intent(this,WebMotorsActivity.class);
+        startActivity(intentquatro);
+    }
+
+    public void onSobre(View view){
+        Intent intentcinco = new Intent(this,SobreActivity.class);
+        startActivity(intentcinco);
+    }
+
+//activity_main.xml
+
+
+//MercadoLivreActivity.java
+
+    Webview webviewum=findViewById(R.id.webviewum);
+    webviewum.setWebViewClient(new WebViewClient());
+    webviewum.getSettings().setJavaScriptEnabled(true);
+    webviewum.loadUrl("https://www.mercadolivre.com.br/")
+
+    Intent intentum=getIntent();
+
+
+//activity_MercadoLivre.xml
+
+<WebView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id"@+id/webviewum"
+
+
+
+
+
+
+//EbayActivity.java
+    
+    Webview webviewdois=findViewById(R.id.webviewdois);
+    webviewdois.setWebViewClient(new WebViewClient());
+    webviewdois.getSettings().setJavaScriptEnabled(true);
+    webviewdois.loadUrl("https://www.ebay.com/")
+
+    Intent intentdois=getIntent();
+
+//activity_Ebay.xml
+
+<WebView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id"@+id/webviewdois"
+
+
+
+
+
+//MagaluActivity.java
+    
+    Webview webviewtres=findViewById(R.id.webviewtres);
+    webviewtres.setWebViewClient(new WebViewClient());
+    webviewtres.getSettings().setJavaScriptEnabled(true);
+    webviewdois.loadUrl("https://www.magazineluiza.com.br/?partner_id=974&gclid=EAIaIQobChMI5Krh887W6AIVBwqRCh2ZdAMsEAAYASAAEgIPcfD_BwE")
+
+    Intent intenttres=getIntent();
+
+//activity_Magalu.xml
+
+<WebView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id"@+id/webviewtres"
+
+
+
+
+
+//WebMotorsActivity.java
+    
+    Webview webviewquatro=findViewById(R.id.webviewquatro);
+    webviewquatro.setWebViewClient(new WebViewClient());
+    webviewquatro.getSettings().setJavaScriptEnabled(true);
+    webviewdois.loadUrl("https://www.webmotors.com.br/?gclid=EAIaIQobChMI0_7yo8_W6AIVUICRCh2SgAHDEAAYASAAEgK4__D_BwE&ef_id=EAIaIQobChMI0_7yo8_W6AIVUICRCh2SgAHDEAAYASAAEgK4__D_BwE:G:s&s_kwcid=AL!664!3!382916219235!e!!g!!webmotors")
+
+    Intent intentquatro=getIntent();
+
+//activity_WebMotors.xml
+
+<WebView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id"@+id/webviewquatro"
+
+
+
+
+
+//SobreActivity.java
+
+    Intent intentum=getIntent();
+
+
+//activity_Sobre.xml
+
+           
+
+
+
+
+
+
+
+
+
+
+
